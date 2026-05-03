@@ -1,18 +1,108 @@
 // @amlhubs/fipa-acl — IEEE FIPA Agent Communication Language
 //
-// This file is the public entry point. Implementers INSERT named re-exports
-// below as concrete classes and interfaces are added to ./fipa-acl.ts.
-//
-// Re-export discipline (mirrors @amlhubs/uml index.ts):
-//   - Concrete classes re-exported through the named-export block.
-//   - Interfaces re-exported through the type-only export block.
-//   - Optional frozen lowercase dotted-namespace accessor (`fipaAcl.{...}`)
-//     may be added once the metaclasses are stable.
+// Public entry point: re-exports concrete classes (named) and interfaces
+// (type-only). Mirrors the @amlhubs/uml index.ts pattern.
 
-// ─── Named re-exports — concrete classes (tree-shakeable) ────────────────────
-// (Implementers INSERT class names here as they are added to ./fipa-acl.ts)
-export {} from './fipa-acl.js'
+// ─── Named re-exports — concrete witness classes ─────────────────────────────
+export {
+  PerformativeKind,
+  ACLMessage,
+  AgentIdentifier,
+  SLProfile,
+} from './fipa-acl.js'
 
 // ─── Interface type re-exports (extendable contracts) ────────────────────────
-// (Implementers INSERT interface names here as they are added to ./fipa-acl.ts)
-export type {} from './fipa-acl.js'
+export type {
+  // Performative enumeration + 22 literals (SC00037J)
+  IPerformativeKind,
+  IPerformativeKindAcceptProposal,
+  IPerformativeKindAgree,
+  IPerformativeKindCancel,
+  IPerformativeKindCfp,
+  IPerformativeKindConfirm,
+  IPerformativeKindDisconfirm,
+  IPerformativeKindFailure,
+  IPerformativeKindInform,
+  IPerformativeKindInformIf,
+  IPerformativeKindInformRef,
+  IPerformativeKindNotUnderstood,
+  IPerformativeKindPropagate,
+  IPerformativeKindPropose,
+  IPerformativeKindProxy,
+  IPerformativeKindQueryIf,
+  IPerformativeKindQueryRef,
+  IPerformativeKindRefuse,
+  IPerformativeKindRejectProposal,
+  IPerformativeKindRequest,
+  IPerformativeKindRequestWhen,
+  IPerformativeKindRequestWhenever,
+  IPerformativeKindSubscribe,
+  // ACL message envelope (SC00061G)
+  IACLMessage,
+  IACLMessagePerformative,
+  IACLMessageSender,
+  IACLMessageReceiver,
+  IACLMessageReplyTo,
+  IACLMessageContent,
+  IACLMessageLanguage,
+  IACLMessageEncoding,
+  IACLMessageOntology,
+  IACLMessageProtocol,
+  IACLMessageConversationId,
+  IACLMessageReplyWith,
+  IACLMessageInReplyTo,
+  IACLMessageReplyBy,
+  // Agent identifier (SC00061G §3.5)
+  IAgentIdentifier,
+  IAgentIdentifierName,
+  IAgentIdentifierAddresses,
+  IAgentIdentifierResolvers,
+  // SL profile (SC00008I §2.1)
+  ISLProfile,
+  ISLProfileSL0,
+  ISLProfileSL1,
+  ISLProfileSL2,
+  // Content expression algebra (SC00008I §2)
+  IContentExpression,
+  IProposition,
+  IAtomicProposition,
+  IConjunctiveProposition,
+  IDisjunctiveProposition,
+  INegativeProposition,
+  IImplicativeProposition,
+  IEquivalentProposition,
+  IQuantifiedProposition,
+  IModalProposition,
+  IActionExpression,
+  IAtomicAction,
+  ISequenceActionExpression,
+  IAlternativeActionExpression,
+  IIdentifyingReferenceExpression,
+  IReferentialOperatorIota,
+  IReferentialOperatorEpsilon,
+  IReferentialOperatorAny,
+  // Performative constraints — abstract + 22 concrete (SC00037J §3.x.1)
+  IPerformativeConstraint,
+  IInformConstraint,
+  IRequestConstraint,
+  IProposeConstraint,
+  IAcceptProposalConstraint,
+  IRejectProposalConstraint,
+  IAgreeConstraint,
+  ICancelConstraint,
+  ICfpConstraint,
+  IConfirmConstraint,
+  IDisconfirmConstraint,
+  IFailureConstraint,
+  IInformIfConstraint,
+  IInformRefConstraint,
+  INotUnderstoodConstraint,
+  IPropagateConstraint,
+  IProxyConstraint,
+  IQueryIfConstraint,
+  IQueryRefConstraint,
+  IRefuseConstraint,
+  IRequestWhenConstraint,
+  IRequestWheneverConstraint,
+  ISubscribeConstraint,
+} from './fipa-acl.js'

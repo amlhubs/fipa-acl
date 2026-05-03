@@ -26,9 +26,9 @@
     "directory": "."
   },
   "peerDependencies": {
-    "@amlhubs/uml": "^0.0.2",
+    "@amlhubs/ocl": "^0.0.1",
     "@amlhubs/sbvr": "^0.0.1",
-    "@amlhubs/ocl": "^0.0.1"
+    "@amlhubs/uml": "^0.0.2"
   },
   "keywords": [
     "fipa",
@@ -45,5 +45,10 @@
     "agenihub",
     "amlhubs"
   ],
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@amlhubs/ocl": "^0.0.1",
+    "@amlhubs/sbvr": "^0.0.1",
+    "@amlhubs/uml": "^0.0.2"
+  }
 }
