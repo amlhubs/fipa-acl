@@ -1,0 +1,49 @@
+{
+  "name": "@amlhubs/fipa-acl",
+  "version": "0.0.1",
+  "description": "IEEE FIPA Agent Communication Language — Message Structure (SC00061G), Communicative Act Library (SC00037J), and SL Content Language (SC00008I) as a typed metamodel: 22 performatives, 13-field ACLMessage envelope, ContentExpression hierarchy, SL0 profile. CMOF-conformant; depends on @amlhubs/uml, @amlhubs/sbvr, @amlhubs/ocl.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit -p tsconfig.test.json",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amlhubs/fipa-acl.git",
+    "directory": "."
+  },
+  "peerDependencies": {
+    "@amlhubs/uml": "^0.0.2",
+    "@amlhubs/sbvr": "^0.0.1",
+    "@amlhubs/ocl": "^0.0.1"
+  },
+  "keywords": [
+    "fipa",
+    "fipa-acl",
+    "agent-communication-language",
+    "communicative-act",
+    "performative",
+    "speech-act",
+    "ieee",
+    "metamodel",
+    "metaclass",
+    "agentic-modeling-language",
+    "aml",
+    "agenihub",
+    "amlhubs"
+  ],
+  "license": "UNLICENSED"
+}
